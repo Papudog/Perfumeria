@@ -2,13 +2,10 @@
 Imports Perfumeria.Infrastructure
 
 Public Class LoginView
+    Inherits Form
     Implements IForm
 
     Private ReadOnly Property _usuarioService As New UsuarioService(New UsuarioRepository())
-
-    Private ReadOnly Property _errorDictionary As New Dictionary(Of String, String) From {
-        {"isEmpty", "El nombre de usuario no puede estar vacío"}
-    }
 
     Sub New()
         InitializeComponent()
@@ -21,22 +18,28 @@ Public Class LoginView
         Dim contraseña As String = TextContra.Text
 
         If _usuarioService.ValidarUsuario(nombre, contraseña) Then
-            MessageBox.Show("Usuario válido")
+            Dim dashboard As New Dashboard()
+            AddHandler dashboard.Shown, AddressOf DashboardShown
+            dashboard.Show()
         Else
             MessageBox.Show("Usuario inválido")
         End If
+    End Sub
+
+    Sub DashboardShown()
+        Me.Hide()
     End Sub
 
     Public Function ValidarCampos() As Boolean Implements IForm.ValidarCampos
         ErrorProvider1.Clear()
 
         If (String.IsNullOrWhiteSpace(TextNombre.Text)) Then
-            ErrorProvider1.SetError(TextNombre, _errorDictionary("isEmpty"))
+            ErrorProvider1.SetError(TextNombre, ErrorMessages.ErrorDictionary(ErrorConstants.IS_EMPTY))
             Return False
         End If
 
         If (String.IsNullOrWhiteSpace(TextContra.Text)) Then
-            ErrorProvider1.SetError(TextContra, _errorDictionary("isEmpty"))
+            ErrorProvider1.SetError(TextContra, ErrorMessages.ErrorDictionary(ErrorConstants.IS_EMPTY))
             Return False
         End If
 

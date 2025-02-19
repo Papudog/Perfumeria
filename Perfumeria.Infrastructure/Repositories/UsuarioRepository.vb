@@ -21,6 +21,6 @@ Public Class UsuarioRepository
     End Sub
 
     Public Function ObtenerUsuario(nombre As String, contraseña As String) As IUsuario Implements IUsuarioRepository.ObtenerUsuario
-        Return _usuarios.Where(Function(u) (u.Nombre = nombre) And (u.Contraseña = contraseña)).FirstOrDefault()
+        Return _usuarios.FirstOrDefault(Function(u) (u.Nombre = nombre) And (u.Contraseña = contraseña))
     End Function
 End Class

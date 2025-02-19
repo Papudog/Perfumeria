@@ -149,7 +149,7 @@ Partial Class LoginView
         Controls.Add(Label1)
         Controls.Add(Panel1)
         Name = "LoginView"
-        Text = "Form1"
+        Text = "Inicio de sesión"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
