@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Perfumeria.Application</RootNamespace>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Perfumeria.Domain\Perfumeria.Domain.vbproj" />
+    <ProjectReference Include="..\Perfumeria.Infrastructure\Perfumeria.Infrastructure.vbproj" />
+  </ItemGroup>
+
+</Project>
