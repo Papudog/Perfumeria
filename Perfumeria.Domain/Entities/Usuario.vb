@@ -1,6 +1,4 @@
-﻿Imports Perfumeria.Application
-
-Public Class Usuario
+﻿Public Class Usuario
     Implements IUsuario
 
     Private Property _nombre As String

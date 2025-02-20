@@ -18,7 +18,7 @@ Public Class LoginView
         Dim contraseña As String = TextContra.Text
 
         If _usuarioService.ValidarUsuario(nombre, contraseña) Then
-            Dim dashboard As New Dashboard()
+            Dim dashboard As New Parent()
             AddHandler dashboard.Shown, AddressOf DashboardShown
             dashboard.Show()
         Else
@@ -34,15 +34,19 @@ Public Class LoginView
         ErrorProvider1.Clear()
 
         If (String.IsNullOrWhiteSpace(TextNombre.Text)) Then
-            ErrorProvider1.SetError(TextNombre, ErrorMessages.ErrorDictionary(ErrorConstants.IS_EMPTY))
+            ErrorProvider1.SetError(TextNombre, ErrorDictionary(ErrorConstants.IS_EMPTY))
             Return False
         End If
 
         If (String.IsNullOrWhiteSpace(TextContra.Text)) Then
-            ErrorProvider1.SetError(TextContra, ErrorMessages.ErrorDictionary(ErrorConstants.IS_EMPTY))
+            ErrorProvider1.SetError(TextContra, ErrorDictionary(ErrorConstants.IS_EMPTY))
             Return False
         End If
 
         Return True
     End Function
+
+    Public Sub LimpiarCampos() Implements IForm.LimpiarCampos
+        'Throw New NotImplementedException()
+    End Sub
 End Class

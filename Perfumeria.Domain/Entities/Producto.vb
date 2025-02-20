@@ -3,6 +3,7 @@
 
     Private Property _nombre As String
     Private Property _precio As Decimal
+
     Public Property Nombre As String Implements IProducto.Nombre
         Get
             Return _nombre
