@@ -44,7 +44,8 @@
 
     Public ReadOnly Property TotalConIva As Decimal Implements IVenta.TotalConIva
         Get
-            Return SubTotal * 0.15
+            Dim iva As Decimal = SubTotal * 0.15
+            Return SubTotal + iva
         End Get
     End Property
 End Class

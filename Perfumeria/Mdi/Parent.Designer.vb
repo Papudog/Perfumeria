@@ -32,13 +32,16 @@ Partial Class Parent
         ProductosToolStripMenuItem = New ToolStripMenuItem()
         AgregarProductosToolStripMenuItem = New ToolStripMenuItem()
         ListaDeProductosToolStripMenuItem = New ToolStripMenuItem()
+        VentaToolStripMenuItem = New ToolStripMenuItem()
+        FacturarToolStripMenuItem = New ToolStripMenuItem()
+        RegistroToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
         ' MenuStrip1
         ' 
         MenuStrip1.ImageScalingSize = New Size(20, 20)
-        MenuStrip1.Items.AddRange(New ToolStripItem() {ArchivoToolStripMenuItem, OpcionesToolStripMenuItem, ProductosToolStripMenuItem})
+        MenuStrip1.Items.AddRange(New ToolStripItem() {ArchivoToolStripMenuItem, OpcionesToolStripMenuItem, ProductosToolStripMenuItem, VentaToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
         MenuStrip1.Size = New Size(800, 28)
@@ -93,14 +96,33 @@ Partial Class Parent
         ' AgregarProductosToolStripMenuItem
         ' 
         AgregarProductosToolStripMenuItem.Name = "AgregarProductosToolStripMenuItem"
-        AgregarProductosToolStripMenuItem.Size = New Size(224, 26)
+        AgregarProductosToolStripMenuItem.Size = New Size(217, 26)
         AgregarProductosToolStripMenuItem.Text = "Agregar productos"
         ' 
         ' ListaDeProductosToolStripMenuItem
         ' 
         ListaDeProductosToolStripMenuItem.Name = "ListaDeProductosToolStripMenuItem"
-        ListaDeProductosToolStripMenuItem.Size = New Size(224, 26)
+        ListaDeProductosToolStripMenuItem.Size = New Size(217, 26)
         ListaDeProductosToolStripMenuItem.Text = "Lista de productos"
+        ' 
+        ' VentaToolStripMenuItem
+        ' 
+        VentaToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {FacturarToolStripMenuItem, RegistroToolStripMenuItem})
+        VentaToolStripMenuItem.Name = "VentaToolStripMenuItem"
+        VentaToolStripMenuItem.Size = New Size(60, 24)
+        VentaToolStripMenuItem.Text = "Venta"
+        ' 
+        ' FacturarToolStripMenuItem
+        ' 
+        FacturarToolStripMenuItem.Name = "FacturarToolStripMenuItem"
+        FacturarToolStripMenuItem.Size = New Size(224, 26)
+        FacturarToolStripMenuItem.Text = "Facturar"
+        ' 
+        ' RegistroToolStripMenuItem
+        ' 
+        RegistroToolStripMenuItem.Name = "RegistroToolStripMenuItem"
+        RegistroToolStripMenuItem.Size = New Size(224, 26)
+        RegistroToolStripMenuItem.Text = "Registro de ventas"
         ' 
         ' Parent
         ' 
@@ -128,4 +150,7 @@ Partial Class Parent
     Friend WithEvents ProductosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AgregarProductosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ListaDeProductosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents VentaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FacturarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegistroToolStripMenuItem As ToolStripMenuItem
 End Class

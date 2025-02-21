@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ViewClientes
+Partial Class ViewVentas
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,30 +22,30 @@ Partial Class ViewClientes
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        DataGridClientes = New DataGridView()
-        CType(DataGridClientes, ComponentModel.ISupportInitialize).BeginInit()
+        DataGridVentas = New DataGridView()
+        CType(DataGridVentas, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' DataGridClientes
+        ' DataGridVentas
         ' 
-        DataGridClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridClientes.Location = New Point(12, 12)
-        DataGridClientes.Name = "DataGridClientes"
-        DataGridClientes.RowHeadersWidth = 51
-        DataGridClientes.Size = New Size(674, 393)
-        DataGridClientes.TabIndex = 0
+        DataGridVentas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridVentas.Location = New Point(12, 12)
+        DataGridVentas.Name = "DataGridVentas"
+        DataGridVentas.RowHeadersWidth = 51
+        DataGridVentas.Size = New Size(674, 393)
+        DataGridVentas.TabIndex = 0
         ' 
-        ' ViewClientes
+        ' ViewVenta
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(698, 450)
-        Controls.Add(DataGridClientes)
-        Name = "ViewClientes"
-        Text = "Lista de clientes"
-        CType(DataGridClientes, ComponentModel.ISupportInitialize).EndInit()
+        Controls.Add(DataGridVentas)
+        Name = "ViewVenta"
+        Text = "Registro de ventas"
+        CType(DataGridVentas, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents DataGridClientes As DataGridView
+    Friend WithEvents DataGridVentas As DataGridView
 End Class

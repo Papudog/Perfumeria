@@ -21,4 +21,10 @@
             _precio = value
         End Set
     End Property
+
+    Public ReadOnly Property NombreYPrecio As String Implements IProducto.NombreYPrecio
+        Get
+            Return $"{Nombre} - C${Precio}"
+        End Get
+    End Property
 End Class

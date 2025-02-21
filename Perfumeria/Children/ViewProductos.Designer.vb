@@ -23,7 +23,6 @@ Partial Class ViewProductos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         DataGridProductos = New DataGridView()
-        Label1 = New Label()
         CType(DataGridProductos, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -36,29 +35,17 @@ Partial Class ViewProductos
         DataGridProductos.Size = New Size(674, 393)
         DataGridProductos.TabIndex = 0
         ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Location = New Point(12, 421)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(170, 20)
-        Label1.TabIndex = 1
-        Label1.Text = "Dé click sobre una celda"
-        ' 
         ' ViewProductos
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(698, 450)
-        Controls.Add(Label1)
         Controls.Add(DataGridProductos)
         Name = "ViewProductos"
         Text = "Lista de productos"
         CType(DataGridProductos, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
     Friend WithEvents DataGridProductos As DataGridView
-    Friend WithEvents Label1 As Label
 End Class

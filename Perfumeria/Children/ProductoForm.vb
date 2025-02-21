@@ -21,10 +21,11 @@ Public Class ProductoForm
         })
 
         If Not productoAgregado Then
-            MessageBox.Show("Error al agregar producto")
+            MessageBox.Show("Error al agregar el producto", "Producto", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
         End If
-        MessageBox.Show("Producto agregado")
+
+        MessageBox.Show("Producto agregado con éxito", "Producto", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub ProductoForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load

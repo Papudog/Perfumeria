@@ -107,6 +107,7 @@ Partial Class LoginView
         ' 
         TextContra.Location = New Point(182, 100)
         TextContra.Name = "TextContra"
+        TextContra.PasswordChar = "*"c
         TextContra.Size = New Size(159, 27)
         TextContra.TabIndex = 2
         ' 

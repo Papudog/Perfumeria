@@ -21,10 +21,10 @@ Public Class ClienteForm
             })
 
             If Not clienteAgregado Then
-                MessageBox.Show("Error al agregar cliente")
+                MessageBox.Show("Error al agregar el cliente", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Return
             End If
-            MessageBox.Show("Cliente agregado")
+            MessageBox.Show("Cliente agregado con éxito", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try

@@ -1,4 +1,5 @@
 ﻿Imports Perfumeria.Application
+Imports Perfumeria.Domain
 
 Public Class ViewProductos
     Inherits Form
@@ -16,10 +17,6 @@ Public Class ViewProductos
     End Sub
 
     Sub PopulateGrid()
-        DataGridProductos.DataSource = _productoService.ObtenerProductos()
-    End Sub
-
-    Private Sub ViewProductos_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
-        Me.Dispose()
+        DataGridProductos.DataSource = _productoService.ObtenerProductos().Select(Function(p) New With {p.Nombre, p.Precio}).ToList()
     End Sub
 End Class
